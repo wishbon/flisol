@@ -1,0 +1,479 @@
+/*Por Sergio Fredes - www.infodi.cl */
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,100,300,600,700);
+@import url(./animaciones.css);
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+}
+body::-webkit-scrollbar-track {
+	background-color: #efc94d;
+}
+
+body::-webkit-scrollbar {
+	width: 12px;
+	background-color: #e1793d;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #e1793d;
+}
+
+ul {
+	padding: 0px 17px;
+}
+a {text-decoration: none;}
+
+/* This class is added on scroll */
+.fixed {
+	position: fixed;
+	top: 0;
+	height: 50px;
+	z-index: 1;
+}
+body {
+	color: #fff;
+	text-align: center;
+	font-size: 1em;
+}
+/* Navigation Settings */
+nav {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	opacity: 0;
+	background: rgb(255, 255, 255);
+	animation-name: nav;
+	visibility: hidden;
+	/* box-shadow: 0px 7px 24px -10px rgba(0,0,0,0.5); */
+	animation-duration: 2s;
+	animation-delay: 4s;
+	animation-fill-mode: forwards;
+}
+a.masinfo {
+	display: block;
+	text-align: center;
+	background: #EFC94D;
+	margin: 19px auto 0 auto;
+	width: 22%;
+	box-shadow: 4px 4px #C55B1F;
+	color: #96491C;
+}
+nav li {
+	display: inline-block;
+	padding: 17px 16px;
+	border-right: 1px solid rgba(252, 195, 9, 0.35);
+}
+
+nav li a {
+	color: #757575;
+	text-transform: uppercase;
+	font-weight: 600;
+	transition: .5s;
+}
+section {
+	padding-bottom: 40px;
+	padding-top: 70px;
+	background: #e1793d;
+	line-height: 25px;
+}
+section .texto {
+	color: #96491C;background: #EFC94D;}
+	section:nth-child(2n+3) {
+		background: #efc94d;
+	}
+	section:nth-child(2n+3) .texto {
+		color:white !important;
+		background: #E1793D;
+	}
+	section#inicio {
+		padding-bottom: 0;
+	}
+	.active {
+		color: #C15B30;
+	}
+
+	/* Screens Settings */
+	#inicio {
+		display: flex;
+		height: 100vh;
+		padding-top: 0;
+		align-items: center;
+		background-color: #FB8D11;
+		background-size: cover;
+		animation-name: fondo;
+		background-attachment: fixed;
+		text-shadow: 1px 2px 0px rgb(128, 37, 0);
+		animation-duration: 3s;
+		animation-delay: 4s;
+		animation-fill-mode: forwards;
+		-webkit-perspective: 150px;/* Chrome, Safari, Opera  */
+		perspective: 150px;
+	}
+	@-moz-document url-prefix() {
+
+		#inicio {
+			background-image: url(../img/back.jpg);
+		}
+
+	}
+	#inicio h2{
+		opacity: 0;
+		animation-name: aparece;
+		visibility: hidden;
+		animation-duration: 2s;
+		animation-delay: 4s;
+		animation-fill-mode: forwards;
+	}
+	h2 {
+		padding: 0 0 10px 0;
+	}
+	h1 {
+		padding: 0 0 20px 0;
+	}
+	#inicio p {
+		padding: 0 0 20px 0;
+	}
+	#inicio img {
+		animation-name: logo;
+		animation-duration: 2.9s;
+		animation-delay: 1s;
+		animation-fill-mode: forwards;
+		transform: perspective(600px);
+		opacity: 0;
+		-webkit-transform: rotateX(45deg); /* Chrome, Safari, Opera  */
+		transform: rotateX(45deg);
+		width: 100%;
+		max-width: 330px;
+		padding: 10px;
+
+	}
+	#equipo .pc {
+		float:left;
+		padding: 0 30px 10px 0;
+	}
+	#equipo .software img {
+		width: 50px;
+	}
+	#equipo .software {
+		margin-top: 30px;
+		display:flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.contenedor {
+		width: 100%;
+		max-width: 1100px;
+		margin: auto;
+	}
+
+	.fecha {
+		font-size: 45px;
+		font-weight: 300;
+		color: #FFFFFF;
+		opacity: 0;
+		visibility: hidden;
+		animation-name: fecha;
+		animation-duration: 2s;
+		animation-fill-mode: forwards;
+		animation-delay: 5s;
+	}
+	.fecha span {
+		font-weight: 600;
+	}
+	.izqder {
+		display: flex;
+	}
+	.compartir a {
+		padding: 10px;
+		margin: 10px;
+		animation-name: nav;
+		animation-duration: 2s;
+		animation-fill-mode: forwards;
+		opacity: 0;
+		visibility: hidden;
+		font-weight: 900;
+	}
+	.compartir a.facebook {
+		background: #4A6EA9;
+		color: white;
+		animation-delay: 6.2s;
+		box-shadow: 4px 4px #2C4A79;
+		text-shadow: 2px 2px #2C4A79;
+	}
+	.compartir a.twitter {
+		background: #33CCFF;
+		color: white;
+		animation-delay: 6.5s;
+		box-shadow: 4px 4px #229EC7;
+		text-shadow: 2px 2px #229EC7;
+	}
+	.compartir a.googlemas {
+		background: #DD4B38;
+		color: white;
+		animation-delay: 6.8s;
+		box-shadow: 4px 4px #B93D2D;
+		text-shadow: 2px 2px #B93D2D;
+	}
+	.texto {
+		box-sizing: border-box;
+		padding: 25px;
+		margin: 0 20px;
+		box-shadow: 5px 5px #C55B1F;
+		text-align: left;
+	}
+	.izqder .texto {
+		width: 50%;
+	}
+	#software .izqder .texto.videos {
+		width: 30%;
+	}
+	#software .izqder .texto {
+		background: #E1793D;
+		width: 70%
+	}
+	#flisol .izqder .texto {
+		background: #EFC94D;;
+	}
+	#flisol ul li {
+		display: inline-table;
+	}
+	#flisol ul li a {
+
+		display: block;
+		text-align: center;padding: 0 6px;font-weight: 900;background: #E1793D;
+		margin: 19px auto 0 auto;width: 100px;box-shadow: 4px 4px #C55B1F;color: #FFFFFE;margin: 13px 5px;}
+		.countdown {
+			display: flex;
+			justify-content: space-around;
+			list-style: none;
+			width: 50%;
+			margin: auto;
+		}
+		#agenda .actividades .actividad img {
+			width: 23%;
+			height: 120px !important;
+			margin: 0 15px 0 0;
+			border:4px solid white;
+			box-shadow: 5px 5px #C55B1F;
+		}
+
+		#agenda .actividades .actividad {
+			display: flex;
+			padding: 10px 0;
+		}
+
+		#agenda .hora {
+			font-weight: 900;
+			font-style: italic;
+		}
+		#agenda .titulo {
+			font-weight: 900;
+			font-size: 1.2em;
+		}
+		#agenda hr {
+			height: 6px;
+			background: url(../img/hr.png) repeat-x 0 0;
+			border: 0;
+		}
+		ul.countdown {
+			animation-name: fecha;
+			animation-duration: 2s;
+			animation-fill-mode: forwards;
+			animation-delay: 5s;
+			opacity: 0;
+			visibility: hidden;
+		}
+		.cabecera {
+			animation-name: cabecera;
+			animation-duration: 2s;
+			animation-delay:4.5s;
+			animation-fill-mode: forwards;
+		}
+		ul.countdown li span {
+			font-size: 60px;
+			font-weight: 900;
+			line-height: 80px;
+		}
+		.formularios, #caracteristicas {
+			display: none;
+		}
+		.menus {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.menus input[type="radio"] {
+			display: none;
+			visibility: hidden;
+		}
+		.menus label {
+			background: #EFC94D;
+			margin: 10px;
+			display: block;
+			padding: 8px 34px;
+			color: #96491C;
+			box-sizing: border-box;
+			cursor: pointer;
+		}
+		input[type="text"], textarea, input[type="email"]{
+			border: 0px;
+			width: 100%;
+			line-height: 31px;
+			padding-left: 20px;
+			box-sizing: border-box;
+			background-color: #EFC94D;
+			box-shadow: 5px 5px #C55B1F;
+			margin-bottom: 5px;
+		}
+		input[type=radio]:checked + label img {
+			box-shadow: 0px 0px 118px rgb(0, 174, 255);
+			transition: .5s;
+		}
+		input[type=radio]:checked + label {
+			transition: .5s;
+			color: white;
+			background: #BB551B;
+		}
+		::-webkit-input-placeholder {
+			color: #96491C;
+		}
+
+		:-moz-placeholder { /* Firefox 18- */
+			color: #96491C;
+		}
+
+		::-moz-placeholder {  /* Firefox 19+ */
+			color: #96491C;
+		}
+
+		:-ms-input-placeholder {
+			color: #96491C;
+		}
+		input[type="submit"] {
+			border: 0;
+			background: #C55B1F;
+			color: white;
+			font-weight: 900;
+			padding: 10px 28px;
+			box-shadow: 5px 5px #EFC94D;
+		}
+
+		.ins {
+			display: block;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			opacity: 1;
+			top: 90px;
+			z-index: 1;
+			animation-name: inscripcion;
+			animation-delay: 5s;
+			animation-duration: 2s;
+			animation-fill-mode: forwards;
+		}
+		.ins p {
+			background: rgb(90, 221, 47);
+			max-width: 355px;
+			margin:auto;
+			color: #FFFFFE;
+			padding: 26px !important;
+			font-weight: 900;
+			font-size: 1.4em;
+			text-shadow: 1px 1px #1C5D0C;
+			border-radius: 10px;
+			box-shadow: 0 0 30px rgba(93, 31, 18, 0.54);
+		}
+
+		.politicas {
+			text-align: center;
+		}
+		.politicas a {
+			display: block;
+			padding: 9px 10px 8px 40px;
+			background: #EFC94D;
+			box-shadow: 5px 5px #C55B1F;
+			background-image: url('../img/descarga.svg');
+			color: #A3552C;
+			font-weight: 900;
+			width: 169px;
+			background-repeat: no-repeat;
+			background-size: 35px;
+			margin: auto;
+		}
+		.nottp {
+			font-size: 80px;
+	    display: block;
+	    margin-bottom: 20px;
+		}
+		section#footer {
+    color: #A1512C;
+}
+
+		@media only screen and (max-width: 700px) {
+
+			#inscripcion .texto, #ubicacion .texto {
+				text-align: center !important;
+			}
+			.compartir, nav, #flisol,#equipo .contenedor, #software, .cts, iframe {
+				display: none;
+			}
+			#equipo {
+				height: 0;padding: 0;margin: 0;
+			}
+			ul.countdown li span {
+				font-size: 39px;
+				margin: 10px;
+			}
+			#inicio img,#inicio h2,.fecha,.countdown  {
+				animation: none !important;
+				opacity: 1 !important;
+				visibility: visible !important;
+				-webkit-transform: rotateX(0deg);
+				transform: rotateX(0deg);
+			}
+			.countdown {
+				display: block;
+				width: 90%;
+			}
+			.countdown li {
+				display: inline-block;
+			}
+
+			.izqder {
+					display: block;
+			}
+			.izqder .texto {
+					width: 90%;
+			}
+			#footer {
+					padding: 10px;
+			}
+			#inicio {
+					animation: none;
+					-webkit-perspective: none !important;
+					background-image: url(../img/back_movil.jpg);
+			}
+			#ubicacion .mapa {
+				background-color: #E1793D;
+				width: 100%;
+				padding: 10px 0;
+				display: block;
+				color: white;
+				font-weight: 900;
+				font-size: 1.2em;
+				box-shadow: 5px 5px #C55B1F;
+			}
+			#ubicacion span {
+				visibility: hidden;
+			}
+			#ubicacion .mapa::before {
+				content: 'Ver en '
+			}
+
+
+
+
+			}

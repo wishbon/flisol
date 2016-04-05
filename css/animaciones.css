@@ -1,0 +1,72 @@
+@keyframes logo {
+	from {
+	opacity:0;
+	-webkit-transform: scale(.5) rotateX(45deg); /* Chrome, Safari, Opera  */
+	transform: scale(.5) rotateX(45deg);
+	}
+	to {
+	opacity: 1;
+	-webkit-transform: scale(1) rotateX(0deg); /* Chrome, Safari, Opera  */
+	transform: scaleX(1) rotateX(0deg);
+	}
+}
+@keyframes nav {
+	from {
+	bottom: -70px;
+	opacity: 0;
+	visibility: hidden;;
+	}
+	to {
+	bottom: 0;
+	opacity: 1;
+	visibility: visible;
+	}
+}
+
+@keyframes cabecera {
+	from {
+	margin-top: 0px;
+	}
+	to {
+	margin-top: -60px;
+	}
+}
+@keyframes fecha {
+	from {
+	bottom: -70px;
+	opacity: 0;
+	visibility: hidden;
+	}
+	to {
+	bottom: 0;
+	opacity: 1;
+	visibility: visible;
+	}
+}
+@keyframes fondo {
+  from {
+    background-image: url('../img/back_color.png');
+  }
+  to {
+    background-image: url('../img/back.jpg');
+  }
+}
+@keyframes aparece {
+  from {
+    opacity: 0;
+		visibility: hidden;
+  }
+  to {
+    opacity: 1;
+		visibility: visible;
+  }
+}
+
+@keyframes inscripcion {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
