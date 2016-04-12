@@ -298,7 +298,7 @@ section .texto {
 			line-height: 80px;
 		}
 		.formularios, #caracteristicas {
-			display: none;
+			/*display: none;*/
 		}
 		.menus {
 			display: flex;

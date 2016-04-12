@@ -183,20 +183,20 @@ $row = 0;
 
 while (!feof($fp)) {
 	$row++;
-	$line = fgets($fp,1024); //use 2048 if very long lines
+	$line = fgets($fp,1024);
 	$field[$row] = explode('|', $line);
-	if ($sortby == 'tipo') {$sortkey = strtolower($field[$row][0]);} //firstname
-	if ($sortby == 'nombre') {$sortkey = strtolower($field[$row][1]);} //surname
-	if ($sortby == 'email') {$sortkey = strtolower($field[$row][2]);} //city
-	if ($sortby == 'comuna') {$sortkey = $field[$row][3];} //points
-	if ($sortby == 'actividad') {$sortkey = strtolower($field[$row][4]);} //car
-	if ($sortby == 'trae') {$sortkey = strtolower($field[$row][5]);} //car
-	if ($sortby == 'caracteristicas') {$sortkey = strtolower($field[$row][6]);} //car
-	if ($sortby == 'titulo') {$sortkey = strtolower($field[$row][7]);} //car
-	if ($sortby == 'publico') {$sortkey = strtolower($field[$row][8]);} //car
-	if ($sortby == 'resumen') {$sortkey = strtolower($field[$row][9]);} //car
-	if ($sortby == 'conocimientos') {$sortkey = strtolower($field[$row][10]);} //car
-	array_unshift($field[$row], $sortkey); //add sortkey to start of array
+	if ($sortby == 'tipo') {$sortkey = strtolower($field[$row][0]);}
+	if ($sortby == 'nombre') {$sortkey = strtolower($field[$row][1]);}
+	if ($sortby == 'email') {$sortkey = strtolower($field[$row][2]);}
+	if ($sortby == 'comuna') {$sortkey = $field[$row][3];}
+	if ($sortby == 'actividad') {$sortkey = strtolower($field[$row][4]);}
+	if ($sortby == 'trae') {$sortkey = strtolower($field[$row][5]);}
+	if ($sortby == 'caracteristicas') {$sortkey = strtolower($field[$row][6]);}
+	if ($sortby == 'titulo') {$sortkey = strtolower($field[$row][7]);}
+	if ($sortby == 'publico') {$sortkey = strtolower($field[$row][8]);}
+	if ($sortby == 'resumen') {$sortkey = strtolower($field[$row][9]);}
+	if ($sortby == 'conocimientos') {$sortkey = strtolower($field[$row][10]);}
+	array_unshift($field[$row], $sortkey); 
 }
 
 fclose($fp);

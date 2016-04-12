@@ -47,20 +47,12 @@
 
 
 			<div class="texto cts">
-				<h2>Charlas, Talleres, Stand</h2>
-				<p>La colaboración libre es importante en el FLISOL, es por esta razón que te invitamos a postular una charla o taller del conocimiento que tengas en materia tecnólogica orientada a tecnologías libres, así otros pueden aprender de ti y tu experiencia. Conoce las políticas de selección de charlas, tallers y stands, puedes descargarlas aquí:</p>
-				<br>
-				<div class="politicas">
-					<a href="#">Condiciones</a>
-				</div>
-				<br>
-				<br>
-				<h2>Inscribir:</h2>
+				<h2>Inscribir Stand:</h2>
 
-				<div class="menus">
+			<!--	<div class="menus">
 
 
-					<div class="menu">
+				<	<div class="menu">
 						<input type="radio" name="name" id="charla" value="" onclick="ChangeForm()"><label for="charla">Charla<br />
 						</label>
 					</div>
@@ -141,7 +133,7 @@
 			</form>
 
 		</div>
-
+-->
 
 		<div id="fstand" class="formularios">
 
@@ -167,27 +159,6 @@
 
 
 
-
-	<script type="text/javascript">
-	function ChangeForm(){
-
-		if(document.getElementById('charla').checked)
-		document.getElementById('fcharla').style.display = "inline";
-		else
-		document.getElementById('fcharla').style.display = "none";
-
-		if(document.getElementById('taller').checked)
-		document.getElementById('ftaller').style.display = "inline";
-		else
-		document.getElementById('ftaller').style.display = "none";
-
-		if(document.getElementById('stand').checked)
-		document.getElementById('fstand').style.display = "inline";
-		else
-		document.getElementById('fstand').style.display = "none";
-
-	}
-	</script>
 
 </div>
 </div>
