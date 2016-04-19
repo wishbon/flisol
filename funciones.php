@@ -14,7 +14,7 @@ $(document).ready(function(){
 $(document).ready(function () {
 	$(document).on("scroll", onScroll);
 
-	//smoothscroll
+	//////////////smoothscroll/////////////////////
 	$('a[href^="#"]').on('click', function (e) {
 		e.preventDefault();
 		$(document).off("scroll");
@@ -199,5 +199,34 @@ function actualizaInfostand(maximoCaracteres) {
 		info.innerHTML = "Puedes escribir hasta "+(maximoCaracteres-elemento.value.length)+" caracteres adicionales";
 	}
 }
+
+
+
+
+////////////////////pop up info contact/////////////////////
+
+	$(document).ready(function () {
+
+  var popup = $("#sergio"),
+      doc = $(document),
+      popClass = "popped",
+      showPopup = function (event) {
+        popup.fadeIn(300);
+        event.preventDefault();
+      },
+      hidePopup = function (event) {
+        popup.fadeOut(300);
+        event.preventDefault();
+      };
+  doc.on("click", "#popup-sergio", showPopup);
+  doc.on("click", ".popup__close", hidePopup);
+
+  doc.keypress(function (event) {
+    if (event.keyCode === 27) { // esc key
+      hidePopup();
+    }
+  });
+
+});
 
 </script>

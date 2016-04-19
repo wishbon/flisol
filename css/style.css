@@ -1,11 +1,13 @@
 /*Por Sergio Fredes - www.infodi.cl */
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,100,300,600,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 @import url(./animaciones.css);
+@import url(./font-awesome.css);
 
 * {
 	margin: 0;
 	padding: 0;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 body::-webkit-scrollbar-track {
 	background-color: #efc94d;
@@ -19,7 +21,9 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
 	background-color: #e1793d;
 }
-
+h1, h2, h3, h4 {
+	font-family: 'Raleway', sans-serif;
+}
 ul {
 	padding: 0px 17px;
 }
@@ -253,8 +257,9 @@ section .texto {
 			margin: auto;
 		}
 		#agenda .actividades .actividad img {
-			width: 23%;
-			height: 120px !important;
+			width: 100px !important;
+			border-radius: 50%;
+			height: 100px !important;
 			margin: 0 15px 0 0;
 			border:4px solid white;
 			box-shadow: 5px 5px #C55B1F;
@@ -411,6 +416,115 @@ section .texto {
 		section#footer {
     color: #A1512C;
 }
+
+.charlas {
+	display: flex;
+
+}
+.charla {
+	width: 33%;
+	line-height: initial;
+	text-align: center;
+	background: #EEA83F;
+	margin:5px;
+	padding: 15px 5px;
+	box-sizing: border-box;
+	/* box-shadow: 3px 3px #C55B1F; */
+}
+.charla p {
+	margin-top: 15px;
+}
+.charla i {
+	font-size: 25px;
+}
+.charla img {
+	width: 140px;
+	border-radius: 50%;
+	box-shadow: 5px 4px #C55B1F;
+	border: 6px solid #EFC94D;
+	margin-bottom: 10px;
+}
+
+
+
+
+
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(31, 63, 66, 0.5);
+    display: none;
+    z-index: 10000;
+}
+.popup__inner {
+    overflow-y: scroll;
+    max-height: 100%;
+    background-color: #f2f2f2;
+    width: 90%;
+    max-width: 600px;
+    margin: 25vh auto 0;
+    padding-bottom: 1.5em;
+    border-radius: 2px;
+    box-shadow: 0 0 3em rgba(0, 0, 0, 0.61);
+    overflow-y: hidden;
+		text-align: left;
+		color: #252525;
+}
+.popup__header {
+    padding: 0.25em 0.75em;
+    text-align: right;
+}
+.perfil-imagen {
+    width: 40%;
+    float: left;
+}
+.perfil-resume {
+    width: 56%;
+    padding-right: 15px;
+    float: right;
+}
+.perfil-resume small {
+    padding-bottom: 6px;
+    display: block;
+    font-style: italic;
+    font-weight: 600;
+}
+.popup__close {
+    display: inline-block;
+    width: 0.875em;
+    height: 0.875em;
+    background-color: tomato;
+    border-radius: 50%;
+}
+.profile__image {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    border: 0.125em solid white;
+    background-color: #FFF;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0px 6px 10px -7px #36595B;
+}
+.perfil-imagen .fa {
+    font-size: 20px;
+    color: #377C81;
+}
+.perfil-imagen ul {
+    text-align: center;
+}
+ul.social li {
+    position: relative;
+    padding-top: 40px;
+    display: inline-block;
+}
+
+
+
 
 		@media only screen and (max-width: 700px) {
 
