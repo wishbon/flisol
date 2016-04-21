@@ -35,6 +35,7 @@
 				date: '04/23/2016 12:00:00',
 				offset: +10
 			}, function () {
+				//cuando llegue a 0, el contador mandara ese mensaje!
 				alert('Ya es el día!!! ponte las chalas y parte al FLISOL!');
 			});
 			</script>
